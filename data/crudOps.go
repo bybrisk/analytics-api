@@ -8,6 +8,7 @@ func UpdateBehaviourCRUDOPS (d *CustomerBehaviourRequest) *CustomerBehaviourSucc
 	loc, _ := time.LoadLocation("Asia/Kolkata")
     now := time.Now().In(loc)
     fmt.Println("Location : ", loc, " Time : ", now)
+	now.Format("2006-01-02")
 	d.Date = now.String()
 	d.RecievingScore = 6.98
 	res := UpdateCustomerBehaviour(d)
@@ -18,10 +19,15 @@ func UpdateBehaviourCRUDOPS (d *CustomerBehaviourRequest) *CustomerBehaviourSucc
 			PhoneNumber: d.PhoneNumber,
 			Message: "Behaviour added successfully with PhoneNumber",
 		}
+	} else if res == 0 {
+		response = CustomerBehaviourSuccess{
+			PhoneNumber: d.PhoneNumber,
+			Message: "Behaviour added successfully with PhoneNumber",
+		}
 	} else {
 		response = CustomerBehaviourSuccess{
 			PhoneNumber: d.PhoneNumber,
-			Message: "Error adding Behaviour!",
+			Message: "Some error occured!",
 		}
 	}
 

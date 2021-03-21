@@ -2,6 +2,7 @@ package data
 
 import (
 	//"github.com/bybrisk/structs"
+	"fmt"
 	"go.mongodb.org/mongo-driver/bson"
 	"github.com/shashank404error/shashankMongo"
 	log "github.com/sirupsen/logrus"
@@ -22,5 +23,6 @@ func UpdateCustomerBehaviour (payload *CustomerBehaviourRequest) int64 {
 		log.Error("UpdateCustomerBehaviour ERROR:")
 		log.Error(err)
 	}
+	fmt.Println(updateResult.ModifiedCount)
 	return updateResult.ModifiedCount
 }
