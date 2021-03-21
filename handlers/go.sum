@@ -3,6 +3,10 @@ github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/
 github.com/bybrisk/analytics-api v0.0.0-20210321205049-350b8b184f86 h1:91AukkvQrKmocThIJdrpQApgTfK1S0HF7gPW0t6ggiU=
 github.com/bybrisk/analytics-api/data v0.0.0-20210321205049-350b8b184f86 h1:4vkDTqUlf7rvuM/Hm3QKvOkKEXYNo3XbBtLLNj5YNg8=
 github.com/bybrisk/analytics-api/data v0.0.0-20210321205049-350b8b184f86/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321212057-6d55ccc9b51f h1:cVmO0zFAsI9utQc44iNNheHAXT9nhONFxJFw6rvEgFk=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321212057-6d55ccc9b51f/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321212206-e936a33e914b h1:MJXQmWplMl/Zwrq8Fzs+HG+hq4ws/GzDo2gH/EBqCbo=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321212206-e936a33e914b/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
