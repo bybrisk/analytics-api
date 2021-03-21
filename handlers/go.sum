@@ -1,8 +1,8 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/analytics-api v0.0.0-20210321204501-98f7896ebd6c h1:lYTERFvBLnw2UprqN/Xvq++3cUs9tljJGJh5RnFTqmg=
-github.com/bybrisk/analytics-api/data v0.0.0-20210321204501-98f7896ebd6c h1:6iWbQso3gxzgHiaMjIOz6NFBpPg1xVLJPnylkEXsyXI=
-github.com/bybrisk/analytics-api/data v0.0.0-20210321204501-98f7896ebd6c/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
+github.com/bybrisk/analytics-api v0.0.0-20210321205049-350b8b184f86 h1:91AukkvQrKmocThIJdrpQApgTfK1S0HF7gPW0t6ggiU=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321205049-350b8b184f86 h1:4vkDTqUlf7rvuM/Hm3QKvOkKEXYNo3XbBtLLNj5YNg8=
+github.com/bybrisk/analytics-api/data v0.0.0-20210321205049-350b8b184f86/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
