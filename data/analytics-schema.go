@@ -50,6 +50,26 @@ type CustomerBehaviourRequest struct{
 	Date string `json: "date"`
 }
 
+//post request to insert behavioural pattern
+type UpdateGeocodeRequest struct{
+
+	// Id of Delivery (BybID of Delivery)
+	//
+	// required: true
+	// max length: 1000
+	DeliveryID string `json: "deliveryID" validate:"required"`
+
+	// Latitude from GPS
+	//
+	// required: true
+	Latitude float64 `json:"latitude" validate:"required"`
+
+	// Longitude from GPS
+	//
+	// required: true
+	Longitude float64 `json:"longitude" validate:"required"`
+}
+
 //post response
 type CustomerBehaviourSuccess struct {
 	// Phone number of customer
@@ -61,7 +81,23 @@ type CustomerBehaviourSuccess struct {
 	Message string `json:"message"`
 }
 
+//Geocode post response
+type UpdateGeocodeSuccess struct {
+	// Phone number of customer
+	//
+	DeliveryID string `json: "deliveryID"`
+
+	// Response message of success or failure
+	//
+	Message string `json:"message"`
+}
+
 func (d *CustomerBehaviourRequest) ValidateCustomerBehaviourRequest() error {
+	validate := validator.New()
+	return validate.Struct(d)
+}
+
+func (d *UpdateGeocodeRequest) ValidateUpdateGeocodeRequest() error {
 	validate := validator.New()
 	return validate.Struct(d)
 }

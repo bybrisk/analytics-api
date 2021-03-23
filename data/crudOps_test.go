@@ -8,7 +8,7 @@ import (
 	"github.com/bybrisk/analytics-api/data"
 )
 
-func TestUpdateBehaviourCRUDOPS(t *testing.T) {
+/*func TestUpdateBehaviourCRUDOPS(t *testing.T) {
 	agentRequest := &data.CustomerBehaviourRequest{
 		BusinessID: "6038bd0fc35e3b8e8bd9f81a",
 		DeliveryID: "bybrisk123",
@@ -19,4 +19,14 @@ func TestUpdateBehaviourCRUDOPS(t *testing.T) {
 	res:= data.UpdateBehaviourCRUDOPS(agentRequest) 
 	fmt.Println(res)
 
+}*/
+
+func TestUpdateGeocodeCRUDOPS (t *testing.T) {
+	agentRequest := &data.UpdateGeocodeRequest{
+		DeliveryID: "kqP2LHgB6eN9jSTIZGHi",
+		Latitude: 23.25059567,
+		Longitude: 77.4618567,
+	}
+	res:= data.UpdateGeocodeCRUDOPS(agentRequest) 
+	fmt.Println(res)
 }

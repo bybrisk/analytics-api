@@ -45,6 +45,14 @@ type accountPostResponseWrapper struct {
 	Body data.CustomerBehaviourSuccess
 }
 
+// Success message on updating an address geocode
+// swagger:response updateGeocodeResponse
+type geocodePostResponseWrapper struct {
+	// Success message on updating an address geocode
+	// in: body
+	Body data.UpdateGeocodeSuccess
+}
+
 // No content is returned by this API endpoint
 // swagger:response noContentResponse
 type noContentResponseWrapper struct {
@@ -57,4 +65,13 @@ type updateBehaviourParamsWrapper struct {
 	// in: body
 	// required: true
 	Body data.CustomerBehaviourRequest
+}
+
+// swagger:parameters updateGeocode
+type updateGeocodeParamsWrapper struct {
+	// data structure to update Address Geocode.
+	// Note: the id field is ignored by create operations
+	// in: body
+	// required: true
+	Body data.UpdateGeocodeRequest
 }

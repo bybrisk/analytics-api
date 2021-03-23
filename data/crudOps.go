@@ -33,3 +33,21 @@ func UpdateBehaviourCRUDOPS (d *CustomerBehaviourRequest) *CustomerBehaviourSucc
 
 	return &response
 }
+
+func UpdateGeocodeCRUDOPS(d *UpdateGeocodeRequest) *UpdateGeocodeSuccess {
+	var response UpdateGeocodeSuccess
+	res := UpdateAddressGeocodeES(d)
+	if res == "1" {
+		response = UpdateGeocodeSuccess{
+			DeliveryID: d.DeliveryID,
+			Message: "Geocode updated successfully with DeliveryID",
+		}
+	} else {
+		response = UpdateGeocodeSuccess{
+			DeliveryID: d.DeliveryID,
+			Message: "Some error occured!",
+		}
+	}
+	
+	return &response
+}
