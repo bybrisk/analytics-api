@@ -16,6 +16,11 @@ func (d *CustomerBehaviourSuccess) ResultToJSON (w io.Writer) error {
 	return e.Encode(d)
 }
 
+func (d *GenerateGeocodeReportSuccess) GenerateGeocodeReportSuccessToJSON (w io.Writer) error {
+	e := json.NewEncoder(w)
+	return e.Encode(d)
+}
+
 func (d *UpdateGeocodeRequest) FromJSONToUpdateGeocodeRequest (r io.Reader) error {
 	e := json.NewDecoder(r)
 	return e.Decode(d)

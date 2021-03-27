@@ -83,13 +83,75 @@ type CustomerBehaviourSuccess struct {
 
 //Geocode post response
 type UpdateGeocodeSuccess struct {
-	// Phone number of customer
+	// DeliveryID of the address
 	//
 	DeliveryID string `json: "deliveryID"`
 
 	// Response message of success or failure
 	//
 	Message string `json:"message"`
+}
+
+//Generate Geocode report response
+type GenerateGeocodeReportSuccess struct {
+	// BybID of the business
+	//
+	BybID string `json: "bybid"`
+
+	// Response message of success or failure
+	//
+	Message string `json:"message"`
+}
+
+//get all deliveries Response struct
+type DeliveryResponseBulk struct {
+	Hits struct {
+		Hits []struct {
+			//Date of delivery
+			//
+			Index  string `json:"_index"`
+
+			//ID of delivery
+			//
+			ID     string `json:"_id"`
+
+			//Delivery details
+			//
+			Source struct {
+				//Pincode of delivery location
+				//
+				Pincode         string  `json:"pincode"`
+
+				//Latitude of delivery location
+				//
+				Latitude        float64 `json:"latitude"`
+
+				//Phone number of the customer placing delivery
+				//
+				Phone           string  `json:"phone"`
+
+				//Name of the customer placing delivery
+				//
+				CustomerName    string  `json:"CustomerName"`
+
+				//Weight of Item delivered
+				//
+				ItemWeight      float64     `json:"itemWeight"`
+
+				//payment to collect
+				//
+				Amount   float64    `json:"amount"`
+
+				//Address of delivery
+				//
+				CustomerAddress string  `json:"CustomerAddress"`
+
+				//Longitude of delivery location
+				//
+				Longitude       float64 `json:"longitude"`
+			} `json:"_source"`
+		} `json:"hits"`
+	} `json:"hits"`
 }
 
 func (d *CustomerBehaviourRequest) ValidateCustomerBehaviourRequest() error {

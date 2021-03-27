@@ -21,12 +21,17 @@ import (
 
 }*/
 
-func TestUpdateGeocodeCRUDOPS (t *testing.T) {
+/*func TestUpdateGeocodeCRUDOPS (t *testing.T) {
 	agentRequest := &data.UpdateGeocodeRequest{
 		DeliveryID: "kqP2LHgB6eN9jSTIZGHi",
 		Latitude: 23.25059567,
 		Longitude: 77.4618567,
 	}
 	res:= data.UpdateGeocodeCRUDOPS(agentRequest) 
+	fmt.Println(res)
+}*/
+
+func TestGenerateGeocodeReportCRUDOPS (t *testing.T) {
+	res,_:= data.GenerateGeocodeReportCRUDOPS("6059f0c220ce7f802adaf0ac") 
 	fmt.Println(res)
 }
