@@ -3,6 +3,7 @@ package handlers
 
 import (
 	"net/http"
+	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/bybrisk/analytics-api/data"
 )
@@ -28,9 +29,10 @@ func (p *Analytics) GenerateGeocodeReport(w http.ResponseWriter, r *http.Request
 		http.Error(w,"Data failed to marshel",http.StatusInternalServerError)		
 	}
 	w.Header().Set("Content-Type", "application/octet-stream")
-	w.Header().Set("Content-Disposition", "attachment"; filename="userInputData.xlsx")
+	w.Header().Set("Content-Disposition", "attachment; filename=userInputData.xlsx;")
 	w.Header().Set("File-Name", "userInputData.xlsx")
 	w.Header().Set("Content-Transfer-Encoding", "binary")
 	w.Header().Set("Expires", "0")
-	err := file.Write(w)
+	err = file.Write(w)
+	fmt.Println(err)
 }
