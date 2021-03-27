@@ -22,17 +22,19 @@ func (p *Analytics) GenerateGeocodeReport(w http.ResponseWriter, r *http.Request
 	vars := mux.Vars(r)
 	id := vars["businessID"]
 
-	lp,file := data.GenerateGeocodeReportCRUDOPS(id)
+	_,file := data.GenerateGeocodeReportCRUDOPS(id)
 
-	err := lp.GenerateGeocodeReportSuccessToJSON(w)
+	/*err := lp.GenerateGeocodeReportSuccessToJSON(w)
 	if err!=nil {
 		http.Error(w,"Data failed to marshel",http.StatusInternalServerError)		
-	}
+	}*/
 	w.Header().Set("Content-Type", "application/octet-stream")
 	w.Header().Set("Content-Disposition", "attachment; filename=userInputData.xlsx;")
 	w.Header().Set("File-Name", "userInputData.xlsx")
 	w.Header().Set("Content-Transfer-Encoding", "binary")
 	w.Header().Set("Expires", "0")
-	err = file.Write(w)
-	fmt.Println(err)
+	err := file.Write(w)
+	if err!=nil{
+		fmt.Println(err)
+	}
 }
