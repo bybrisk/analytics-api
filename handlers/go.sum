@@ -2,11 +2,11 @@ github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2 h1:MHu5KWWt28FzRGQgc4Ryj/lZT
 github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2/go.mod h1:xc0ybJZXcn084ZaIvQv+LfCDQjMWfxkBa2K9nLXYJtI=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/analytics-api v0.0.0-20210323202337-9ca3209c5018 h1:zV5XIozgjx2xBK7WiFXj6Ljxzr9e8vvZ+5dTBGG9N2c=
-github.com/bybrisk/analytics-api/data v0.0.0-20210323202337-9ca3209c5018 h1:8I+f2nsMm6G5Q7XJTg8LdHN6W1eFRgw1b7o2mYBU39w=
-github.com/bybrisk/analytics-api/data v0.0.0-20210323202337-9ca3209c5018/go.mod h1:jttH0zxDLzh8on2JAhEzBkzS4EGSB2NSF0B+FexGKb0=
-github.com/bybrisk/analytics-api/data v0.0.0-20210327064612-a644c1aa5f77 h1:V8httyN0d9u34PWK80pUU+UG6t+O8cuCpV944fUcZn4=
-github.com/bybrisk/analytics-api/data v0.0.0-20210327064612-a644c1aa5f77/go.mod h1:oacF13C6BZcdEh5/BnnNemcvJDINaOH0Q5ALSn7749s=
+github.com/bybrisk/analytics-api v0.0.0-20210327070312-3446f4b81f1d h1:GOdWmYvCqWOUfkV1zY2mj+x47Z2vTWsB5UjhzeDwxLw=
+github.com/bybrisk/analytics-api/data v0.0.0-20210327070312-3446f4b81f1d h1:Ww5J/I5oXnnXtYvbNq5sBmYtDCFjo5TVEqEY0tHBv2E=
+github.com/bybrisk/analytics-api/data v0.0.0-20210327070312-3446f4b81f1d/go.mod h1:oacF13C6BZcdEh5/BnnNemcvJDINaOH0Q5ALSn7749s=
+github.com/bybrisk/analytics-api/data v0.0.0-20210330104019-b19984f9079f h1:WzkQJq3ZWgiS9caU2uwFFed9qzkHuRZXTe5IL2SmJlw=
+github.com/bybrisk/analytics-api/data v0.0.0-20210330104019-b19984f9079f/go.mod h1:oacF13C6BZcdEh5/BnnNemcvJDINaOH0Q5ALSn7749s=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
