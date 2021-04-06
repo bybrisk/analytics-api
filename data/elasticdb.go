@@ -3,7 +3,7 @@ package data
 import (
 	"encoding/json"
 	"fmt"
-	//"time"
+	"time"
 	log "github.com/sirupsen/logrus"
 	"bytes"
 	//"context"
@@ -26,10 +26,18 @@ var (
 
 func UpdateAddressGeocodeES(d *UpdateGeocodeRequest) string{
 	var id string
+
+	//get todays date
+	loc, _ := time.LoadLocation("Asia/Kolkata")
+    now := time.Now().In(loc)
+    fmt.Println("Location : ", loc, " Date And Time of delivery : ", now)
+	t:=now.Format("01-02-2006")
+	dodATime := t
+
 	//Encode the data
 	postBody:=`{
 		"script" : {
-			"source": "ctx._source.latitude=`+fmt.Sprintf("%f", d.Latitude)+`;ctx._source.longitude=`+fmt.Sprintf("%f", d.Longitude)+`;",
+			"source": "ctx._source.latitude=`+fmt.Sprintf("%f", d.Latitude)+`;ctx._source.longitude=`+fmt.Sprintf("%f", d.Longitude)+`;ctx._source.dateOfDelivery='`+dodATime+`';",
 			"lang": "painless"  
 		  },
 		  "query": {
