@@ -21,7 +21,7 @@ import (
 
 }*/
 
-func TestUpdateGeocodeCRUDOPS (t *testing.T) {
+/*func TestUpdateGeocodeCRUDOPS (t *testing.T) {
 	agentRequest := &data.UpdateGeocodeRequest{
 		DeliveryID: "Ibcng3gBsGM1IID4b8za",
 		Latitude: 23.25059567,
@@ -29,9 +29,14 @@ func TestUpdateGeocodeCRUDOPS (t *testing.T) {
 	}
 	res:= data.UpdateGeocodeCRUDOPS(agentRequest) 
 	fmt.Println(res)
-}
+}*/
 
 /*func TestGenerateGeocodeReportCRUDOPS (t *testing.T) {
-	res,_:= data.GenerateGeocodeReportCRUDOPS("6038bd0fc35e3b8e8bd9f81a") 
+	res,_:= data.GenerateGeocodeReportCRUDOPS("6055ed1801bf19a9a89c9e70") 
 	fmt.Println(res)
 }*/
+
+func TestGetUpdatedDeliveryStatusCRUDOPS(t *testing.T) {
+	res:=data.GetUpdatedDeliveryStatusCRUDOPS("6055ed1801bf19a9a89c9e70")
+	fmt.Println(res)
+}

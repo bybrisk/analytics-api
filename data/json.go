@@ -30,3 +30,8 @@ func (d *UpdateGeocodeSuccess) UpdateGeocodeSuccessToJSON (w io.Writer) error {
 	e := json.NewEncoder(w)
 	return e.Encode(d)
 }
+
+func (d *DeliveryStatusResponseAggregated) DeliveryStatusResponseAggregatedToJSON (w io.Writer) error {
+	e := json.NewEncoder(w)
+	return e.Encode(d)
+}

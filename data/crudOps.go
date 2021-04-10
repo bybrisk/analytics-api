@@ -122,3 +122,22 @@ func GenerateExcelFile(res *DeliveryResponseBulk) *excelize.File {
 	//	}
 	return f
 }
+
+func GetUpdatedDeliveryStatusCRUDOPS(docID string) *DeliveryStatusResponseAggregated{
+	var response DeliveryStatusResponseAggregated
+
+	resDelivered := FetchDeliveryStatusES(docID,"Delivered")
+	resCancelled := FetchDeliveryStatusES(docID,"Cancelled")
+	resPending := FetchDeliveryStatusES(docID,"Pending")
+	resTransit := FetchDeliveryStatusES(docID,"Transit")
+
+	response = DeliveryStatusResponseAggregated{
+		Delivered:resDelivered.Hits.Total.Value ,
+		Cancelled:resCancelled.Hits.Total.Value ,
+		Pending:resPending.Hits.Total.Value ,
+		Transit:resTransit.Hits.Total.Value,
+		Message: "Status fetched successfully",
+	}
+
+	return &response
+}

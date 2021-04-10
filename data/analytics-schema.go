@@ -154,6 +154,23 @@ type DeliveryResponseBulk struct {
 	} `json:"hits"`
 }
 
+//get all deliveries Response struct
+type DeliveryStatusResponseFromES struct {
+	Hits struct {
+		Total struct{
+			Value int64 `json:"value"`
+		} `json:total`
+	} `json:"hits"`
+}
+
+type DeliveryStatusResponseAggregated struct{
+	Delivered int64 `json:"delivered"`
+	Cancelled int64 `json:"cancelled"`
+	Pending int64 `json:"pending"`
+	Transit int64 `json:"transit"`
+	Message string `json:"message"`
+}
+
 func (d *CustomerBehaviourRequest) ValidateCustomerBehaviourRequest() error {
 	validate := validator.New()
 	return validate.Struct(d)

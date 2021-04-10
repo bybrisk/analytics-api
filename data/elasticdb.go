@@ -106,3 +106,41 @@ func GetGeocodeDataES(docID string) *DeliveryResponseBulk{
     	}	
 	return &deliveries
 }
+
+func FetchDeliveryStatusES(docID string,status string) *DeliveryStatusResponseFromES{
+	var deliveries DeliveryStatusResponseFromES
+
+	postBody:=`{
+		"query": {
+		  "bool": {
+			"filter": [
+			  {"term": {"BybID.keyword": "`+docID+`"}},
+			  {"term": {"deliveryStatus.keyword": "`+status+`"}}
+			]
+		  }
+		}
+	  }`
+
+	 responseBody := bytes.NewBufferString(postBody)
+  	//Leverage Go's HTTP Post function to make request
+	 resp, err := http.Post(urlAuthenticate+awsYearIndex+"/_search?size=5000", "application/json", responseBody)
+  
+	 //Handle Error
+	 if err != nil {
+		log.Fatalf("An Error Occured %v", err)
+	 }
+	 defer resp.Body.Close()
+
+	 body, err := ioutil.ReadAll(resp.Body)
+	 if err != nil {
+		log.Error("ReadAll ERROR : ")
+		log.Error(err)
+	 }
+	 
+	 err = json.Unmarshal(body, &deliveries)
+	 if err != nil {
+		log.Error("json.Unmarshal ERROR : ")
+		log.Error(err)
+    	}	
+	return &deliveries	
+}

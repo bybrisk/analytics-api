@@ -61,6 +61,14 @@ type geocodeReportGeneratePostResponseWrapper struct {
 	Body data.GenerateGeocodeReportSuccess
 }
 
+// Success message on fetching delivery status for a businessID
+// swagger:response getDeliveryStatusResponse
+type getDeliveryStatusPostResponseWrapper struct {
+	// Success message on fetching delivery status of a business
+	// in: body
+	Body data.DeliveryStatusResponseAggregated
+}
+
 // No content is returned by this API endpoint
 // swagger:response noContentResponse
 type noContentResponseWrapper struct {
