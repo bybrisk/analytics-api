@@ -3,7 +3,6 @@ package handlers
 
 import (
 	"net/http"
-	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/bybrisk/analytics-api/data"
 )
@@ -22,7 +21,7 @@ func (p *Analytics) GetUpdatedDeliveryStatus(w http.ResponseWriter, r *http.Requ
 	vars := mux.Vars(r)
 	id := vars["businessID"]
 
-	_,file := data.GetUpdatedDeliveryStatusCRUDOPS(id)
+	lp := data.GetUpdatedDeliveryStatusCRUDOPS(id)
 
 	err := lp.DeliveryStatusResponseAggregatedToJSON(w)
 	if err!=nil {

@@ -2,11 +2,11 @@ github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2 h1:MHu5KWWt28FzRGQgc4Ryj/lZT
 github.com/360EntSecGroup-Skylar/excelize/v2 v2.3.2/go.mod h1:xc0ybJZXcn084ZaIvQv+LfCDQjMWfxkBa2K9nLXYJtI=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/aws/aws-sdk-go v1.34.28/go.mod h1:H7NKnBqNVzoTJpGfLrQkkD+ytBA93eiDYi/+8rV9s48=
-github.com/bybrisk/analytics-api v0.0.0-20210401051304-efd76006bb83 h1:WZ91+sITiDGuxoYruWmzzN88QI8/zDX1DjRBJ1Bz1KA=
-github.com/bybrisk/analytics-api/data v0.0.0-20210401051304-efd76006bb83 h1:cijEW2hx0BIB/D4fJYrGOq174WUzFSX5+rIhZj9B6GI=
-github.com/bybrisk/analytics-api/data v0.0.0-20210401051304-efd76006bb83/go.mod h1:wNp3xGEpsfbV+6q/FgiEkDnWxTvvw/126MGDaevF5hs=
-github.com/bybrisk/analytics-api/data v0.0.0-20210406185837-99a13a46c4e8 h1:/thZAzGZo5xIPIA+teDm8gTCSxRvvSHFv6a778wot8M=
-github.com/bybrisk/analytics-api/data v0.0.0-20210406185837-99a13a46c4e8/go.mod h1:OKvxo1e/V0Dgccn91r7/nhBwUIO6i9LZcBMSZT/Rq68=
+github.com/bybrisk/analytics-api v0.0.0-20210406190159-a1ce3a8a497d h1:kcuen6ijkhs0hcp5zVJfppUupbZ0garP/sgzsOEWFQ0=
+github.com/bybrisk/analytics-api/data v0.0.0-20210406190159-a1ce3a8a497d h1:ClWkYcmqQr5QI2mkSLvhiDdsneWJ0QSVNGpBpvn+bOU=
+github.com/bybrisk/analytics-api/data v0.0.0-20210406190159-a1ce3a8a497d/go.mod h1:OKvxo1e/V0Dgccn91r7/nhBwUIO6i9LZcBMSZT/Rq68=
+github.com/bybrisk/analytics-api/data v0.0.0-20210410115829-dbf156777cc6 h1:jKbTu3fl/pTia15lewOl1rb5qBSQzzLqbqg3r3VLfJU=
+github.com/bybrisk/analytics-api/data v0.0.0-20210410115829-dbf156777cc6/go.mod h1:h0wzd+WdiCj4LnsDjnh/iRFxA4bygD6BlHDr6HwnhcU=
 github.com/bybrisk/structs v0.0.0-20201109044720-899a1e012b8c/go.mod h1:+ozPcEcgRTvbDXzFyBlUTgv1G2niBpEsIzF5tySMIck=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -16,6 +16,8 @@ github.com/go-playground/universal-translator v0.17.0/go.mod h1:UkSxE5sNxxRwHyU+
 github.com/go-playground/validator/v10 v10.4.1/go.mod h1:nlOn6nFhuKACm19sB/8EGNn9GlaMV7XkbRSipzJ0Ii4=
 github.com/go-playground/validator/v10 v10.4.2 h1:RqFe5MzGf2UOFhxQYnjHabHOT6CLbYWkeXOfcXB7fsM=
 github.com/go-playground/validator/v10 v10.4.2/go.mod h1:nlOn6nFhuKACm19sB/8EGNn9GlaMV7XkbRSipzJ0Ii4=
+github.com/go-playground/validator/v10 v10.5.0 h1:X9rflw/KmpACwT8zdrm1upefpvdy6ur8d1kWyq6sg3E=
+github.com/go-playground/validator/v10 v10.5.0/go.mod h1:xm76BBt941f7yWdGnI2DVPFFg1UK3YY04qifoXU3lOk=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/melR3HDY=
 github.com/gobuffalo/attrs v0.0.0-20190224210810-a9411de4debd/go.mod h1:4duuawTqi2wkkpB4ePgWMaai6/Kc6WEz83bhFwpHzj0=
