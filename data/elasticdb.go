@@ -69,7 +69,7 @@ func UpdateAddressGeocodeES(d *UpdateGeocodeRequest) string{
 	return id	
 }  
 
-func GetGeocodeDataES(docID string) *DeliveryResponseBulk{
+func GetGeocodeDataES(docID string,status string,date string) *DeliveryResponseBulk{
 	var deliveries DeliveryResponseBulk
 
 	postBody:=`{
@@ -77,7 +77,8 @@ func GetGeocodeDataES(docID string) *DeliveryResponseBulk{
 		  "bool": {
 			"filter": [
 			  {"term": {"BybID": "`+docID+`"}},
-			  {"term" : {"deliveryStatus.keyword" : "Delivered" }}
+			  {"term" : {"deliveryStatus.keyword" : "`+status+`" }},
+			  {"term": {"dateOfDelivery.keyword": "`+date+`"}}
 			]
 		  }
 		}
@@ -85,7 +86,7 @@ func GetGeocodeDataES(docID string) *DeliveryResponseBulk{
 
 	 responseBody := bytes.NewBufferString(postBody)
   	//Leverage Go's HTTP Post function to make request
-	 resp, err := http.Post(urlAuthenticate+"/_all/_search?size=5000", "application/json", responseBody)
+	 resp, err := http.Post(urlAuthenticate+awsYearIndex+"/_search?size=5000", "application/json", responseBody)
   
 	 //Handle Error
 	 if err != nil {

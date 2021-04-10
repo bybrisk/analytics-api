@@ -31,12 +31,12 @@ import (
 	fmt.Println(res)
 }*/
 
-/*func TestGenerateGeocodeReportCRUDOPS (t *testing.T) {
+func TestGenerateGeocodeReportCRUDOPS (t *testing.T) {
 	res,_:= data.GenerateGeocodeReportCRUDOPS("6055ed1801bf19a9a89c9e70") 
 	fmt.Println(res)
-}*/
+}
 
-func TestGetUpdatedDeliveryStatusCRUDOPS(t *testing.T) {
+/*func TestGetUpdatedDeliveryStatusCRUDOPS(t *testing.T) {
 	res:=data.GetUpdatedDeliveryStatusCRUDOPS("6055ed1801bf19a9a89c9e70")
 	fmt.Println(res)
-}
+}*/

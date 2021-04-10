@@ -54,10 +54,10 @@ func UpdateGeocodeCRUDOPS(d *UpdateGeocodeRequest) *UpdateGeocodeSuccess {
 	return &response
 }
 
-func GenerateGeocodeReportCRUDOPS(docID string) (*GenerateGeocodeReportSuccess,*excelize.File){
+func GenerateGeocodeReportCRUDOPS(docID string,status string,date string) (*GenerateGeocodeReportSuccess,*excelize.File){
 	var response GenerateGeocodeReportSuccess
 	
-	res := GetGeocodeDataES(docID)
+	res := GetGeocodeDataES(docID,status,date)
 	file:=GenerateExcelFile(res)
 	//fmt.Println(res)
 	response = GenerateGeocodeReportSuccess{
