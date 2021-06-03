@@ -95,6 +95,9 @@ func GetUserInfo(code string) ([]byte, *oauth2.Token, error) {
 	}*/
 
 	token, err := googleOauthConfig.Exchange(oauth2.NoContext, code)
+
+	fmt.Println(token)
+	
 	if err != nil {
 		return nil, nil ,fmt.Errorf("code exchange failed: %s", err.Error())
 	}
