@@ -185,9 +185,20 @@ type GoogleSheetStructDir struct{
 }
 
 type GoogleSpreadSheetMetaStruct struct{
+	//ID of the spreadsheet on which we observe the response
+	//
 	SpreadsheetId string `json:"spreadsheetId"`
+
+	//URL of the spreadsheet on which we analyse the respone
+	//
 	SpreadsheetUrl string `json:"spreadsheetUrl"`
-    Message string `json:"message"`
+    
+	//Message on completion of the API call
+	//
+	Message string `json:"message"`
+	
+	// Status code of the API call
+	//
 	Status int64 `json:"status"`
 }
 

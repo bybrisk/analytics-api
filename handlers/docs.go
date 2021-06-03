@@ -91,3 +91,11 @@ type updateGeocodeParamsWrapper struct {
 	// required: true
 	Body data.UpdateGeocodeRequest
 }
+
+// Response on analysing response on a googlesheet of a business
+// swagger:response googleSheetAnalysisResponse
+type analyseResponsePostResponseWrapper struct {
+	// Details of googlesheet for analysing response
+	// in: body
+	Body data.GoogleSpreadSheetMetaStruct
+}

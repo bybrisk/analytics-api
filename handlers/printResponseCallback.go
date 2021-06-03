@@ -16,7 +16,7 @@ import (
 //  422: errorValidation
 //  501: errorResponse
 
-func (p *Delivery) AnalyseResponseOnSheet (w http.ResponseWriter, r *http.Request) {
+func (p *Analytics) AnalyseResponseOnSheet (w http.ResponseWriter, r *http.Request) {
 	p.l.Println("Handle GET request -> analytics-api Module")
 
 	state := r.URL.Query().Get("state")
