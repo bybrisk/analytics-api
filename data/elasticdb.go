@@ -77,8 +77,7 @@ func GetGeocodeDataES(docID string,status string,date string) *DeliveryResponseB
 		  "bool": {
 			"filter": [
 			  {"term": {"BybID": "`+docID+`"}},
-			  {"term" : {"deliveryStatus.keyword" : "`+status+`" }},
-			  {"term": {"dateOfDelivery.keyword": "`+date+`"}}
+			  {"term" : {"deliveryStatus.keyword" : "`+status+`" }}
 			]
 		  }
 		}
@@ -144,4 +143,46 @@ func FetchDeliveryStatusES(docID string,status string) *DeliveryStatusResponseFr
 		log.Error(err)
     	}	
 	return &deliveries	
+}
+
+func FetchAllDeliveryES(key string,docID string) DeliveryResponseBulk {
+	var deliveries DeliveryResponseBulk
+
+	postBody:=`{
+		"query": {
+		  "bool": {
+			"filter": [
+			  {"term": {
+				"`+key+`": "`+docID+`"
+			  }}
+			]
+		  }
+		},
+		"sort" : [
+    { "rankingTime" : "desc" }
+  ]
+	  }`
+
+	 responseBody := bytes.NewBufferString(postBody)
+  	//Leverage Go's HTTP Post function to make request
+	 resp, err := http.Post(urlAuthenticate+"/_all/_search?size=5000", "application/json", responseBody)
+  
+	 //Handle Error
+	 if err != nil {
+		log.Fatalf("An Error Occured %v", err)
+	 }
+	 defer resp.Body.Close()
+
+	 body, err := ioutil.ReadAll(resp.Body)
+	 if err != nil {
+		log.Error("ReadAll ERROR : ")
+		log.Error(err)
+	 }
+	 
+	 err = json.Unmarshal(body, &deliveries)
+	 if err != nil {
+		log.Error("json.Unmarshal ERROR : ")
+		log.Error(err)
+    	} 
+	return deliveries
 }

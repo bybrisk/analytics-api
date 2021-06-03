@@ -3,7 +3,8 @@ package data
 import ("time"
 		"fmt"
 		"strconv"
-		"github.com/360EntSecGroup-Skylar/excelize/v2")
+		"github.com/360EntSecGroup-Skylar/excelize/v2"
+		"net/http")
 
 func UpdateBehaviourCRUDOPS (d *CustomerBehaviourRequest) *CustomerBehaviourSuccess{
 	//save data to database and return ID
@@ -139,5 +140,20 @@ func GetUpdatedDeliveryStatusCRUDOPS(docID string) *DeliveryStatusResponseAggreg
 		Message: "Status fetched successfully",
 	}
 
+	return &response
+}
+
+func PrintGoogleSheetCrudOps (businessID string,actionHandler string, r *http.Request) *GoogleSpreadSheetMetaStruct {
+	var response GoogleSpreadSheetMetaStruct
+	
+	sheetID, sheetLink := PrintOrderToShareGoogleAPI(businessID,actionHandler,r)
+	
+	response = GoogleSpreadSheetMetaStruct{
+		SpreadsheetId: sheetID,
+		SpreadsheetUrl: sheetLink,
+		Message: "Successfully updated google sheet!",
+		Status: 200, 
+	}
+	
 	return &response
 }

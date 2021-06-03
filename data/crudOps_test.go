@@ -32,7 +32,7 @@ import (
 }*/
 
 func TestGenerateGeocodeReportCRUDOPS (t *testing.T) {
-	res,_:= data.GenerateGeocodeReportCRUDOPS("6055ed1801bf19a9a89c9e70") 
+	res,_:= data.GenerateGeocodeReportCRUDOPS("607f256144956a457f5f2773","Pending","20-04-2021") 
 	fmt.Println(res)
 }
 

@@ -118,6 +118,10 @@ type DeliveryResponseBulk struct {
 			//Delivery details
 			//
 			Source struct {
+				// note for the delivery agent
+				//
+				Note string `json:"note"`
+
 				//Pincode of delivery location
 				//
 				Pincode         string  `json:"pincode"`
@@ -149,6 +153,10 @@ type DeliveryResponseBulk struct {
 				//Longitude of delivery location
 				//
 				Longitude       float64 `json:"longitude"`
+
+				//Is payment done or not
+				//
+				PaymentStatus   bool    `json:"paymentStatus"`
 			} `json:"_source"`
 		} `json:"hits"`
 	} `json:"hits"`
@@ -169,6 +177,18 @@ type DeliveryStatusResponseAggregated struct{
 	Pending int64 `json:"pending"`
 	Transit int64 `json:"transit"`
 	Message string `json:"message"`
+}
+
+type GoogleSheetStructDir struct{
+	Id string `json:"id"`
+	ActionHandler string `json:"actionHandler"`
+}
+
+type GoogleSpreadSheetMetaStruct struct{
+	SpreadsheetId string `json:"spreadsheetId"`
+	SpreadsheetUrl string `json:"spreadsheetUrl"`
+    Message string `json:"message"`
+	Status int64 `json:"status"`
 }
 
 func (d *CustomerBehaviourRequest) ValidateCustomerBehaviourRequest() error {
